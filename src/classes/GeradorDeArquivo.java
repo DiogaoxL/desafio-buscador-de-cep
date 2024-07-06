@@ -11,7 +11,7 @@ public class GeradorDeArquivo {
         Gson gson = new Gson().newBuilder().setPrettyPrinting().create();
 
         try (FileWriter writer = new FileWriter("historico.json", true)){
-            gson.toJson(endereco.cep() , writer);
+            gson.toJson(endereco , writer);
         }catch (IOException e){
             System.out.println("Erro ao salvar dado no arquivo: " + e.getMessage());
         }

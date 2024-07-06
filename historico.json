@@ -1,18 +1,13 @@
-[
-  {
-    "cep": "09951-430",
-    "logradouro": "Rua dos Tabajaras",
-    "bairro": "Piraporinha",
-    "localidade": "Diadema",
-    "uf": "SP"
-  }
-]
-[
-  {
-    "cep": "01001-000",
-    "logradouro": "Praça da Sé",
-    "bairro": "Sé",
-    "localidade": "São Paulo",
-    "uf": "SP"
-  }
-]
+{
+  "cep": "09951-430",
+  "logradouro": "Rua dos Tabajaras",
+  "bairro": "Piraporinha",
+  "localidade": "Diadema",
+  "uf": "SP"
+}{
+  "cep": "09940-150",
+  "logradouro": "Avenida Dom João VI",
+  "bairro": "Taboão",
+  "localidade": "Diadema",
+  "uf": "SP"
+}
