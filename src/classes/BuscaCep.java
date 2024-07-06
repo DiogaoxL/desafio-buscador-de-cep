@@ -30,20 +30,20 @@ public class BuscaCep {
 
         URI endereco = URI.create("https://viacep.com.br/ws/" + cep + "/json/");
 
-        HttpClient client = HttpClient.newHttpClient();
+
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(endereco)
                 .build();
 
-        HttpResponse<String> response = null;
         try {
-            response = client
+            HttpResponse<String> response = HttpClient
+                    .newHttpClient()
                     .send(request, HttpResponse.BodyHandlers.ofString());
+            return new Gson().fromJson(response.body(), Endereco.class);
 
-        } catch (IOException | InterruptedException e) {
+        } catch (Exception e) {
             throw new RuntimeException("Não consegui obter o endereço a partir desse CEP");
         }
-        return new Gson().fromJson(response.body(), Endereco.class);
     }
 }
 
